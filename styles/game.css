@@ -1,0 +1,58 @@
+.game {
+    padding: 30px;
+}
+
+.game-options {
+    display: flex;
+    justify-content: center;
+}
+
+.game-button {
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.game-button > img {
+    width: 130px;
+    height: 130px;
+    transition: all 0.3s ease;
+}
+
+.game-button:hover > img {
+    width: 140px;
+    height: 140px;
+}
+
+.game-choices {
+    display: flex;
+    justify-content: space-between;
+    margin: 10%;
+}
+
+.title-choice {
+    font-size: clamp(16px, 18px, 20px);
+    color: white;
+}
+
+.position-choice {
+    color: #05F2DB;
+}
+
+.match-result {
+    font-size: 35px;
+    color: white;
+}
+
+.game-points {
+    color: white;
+}
+
+.total-points {
+    font-size: 30px;
+    padding: 0 10px;
+}
