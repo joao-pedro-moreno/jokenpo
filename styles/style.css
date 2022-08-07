@@ -79,3 +79,16 @@ footer {
     font-size: 18px;
     color: #2C51BF;
 }
+
+.title {
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    padding: 10%;
+}
+
+.paragraph {
+    color: white;
+    padding: 0 10%;
+    font-size: 20px;
+}
