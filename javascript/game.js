@@ -21,17 +21,17 @@ function defeat() {
 }
 
 function victory() {
-    matchResult.innerHTML == "Victory"
+    matchResult.innerHTML = "Victory"
     playerPoints++
 }
 
-function tied() {
-    matchResult.innerHTML == "Tied"
+function tiedPoint() {
+    matchResult.innerHTML = "Tied"
 }
 
 function rock() {
     let randComputerChoices = computerPossibleChoices[Math.floor(Math.random() * computerPossibleChoices.length)]
-    
+
     playerChoice.innerHTML = 'Rock'
     computerChoice.innerHTML = randComputerChoices
 
@@ -39,8 +39,8 @@ function rock() {
         defeat()
     } else if (randComputerChoices == "Scissors") {
         victory()
-    } else {
-        tied()
+    } else if (randComputerChoices == "Rock") {
+        tiedPoint()
     }
 
     totalComputerPoints.innerHTML = computerPoints
@@ -49,7 +49,7 @@ function rock() {
 
 function scissors() {
     let randComputerChoices = computerPossibleChoices[Math.floor(Math.random() * computerPossibleChoices.length)]
-    
+
     playerChoice.innerHTML = 'Scissors'
     computerChoice.innerHTML = randComputerChoices
 
@@ -58,7 +58,7 @@ function scissors() {
     } else if (randComputerChoices == "Paper") {
         victory()
     } else {
-        tied()
+        tiedPoint()
     }
 
     totalComputerPoints.innerHTML = computerPoints
@@ -67,7 +67,7 @@ function scissors() {
 
 function paper() {
     let randComputerChoices = computerPossibleChoices[Math.floor(Math.random() * computerPossibleChoices.length)]
-    
+
     playerChoice.innerHTML = 'Paper'
     computerChoice.innerHTML = randComputerChoices
 
@@ -76,7 +76,7 @@ function paper() {
     } else if (randComputerChoices == "Rock") {
         victory()
     } else {
-        tied()
+        tiedPoint()
     }
 
     totalComputerPoints.innerHTML = computerPoints
