@@ -2,6 +2,7 @@ const playerChoice = document.querySelector(".player-choice")
 const computerChoice = document.querySelector(".computer-choice")
 
 const matchResult = document.querySelector(".match-result")
+const gameWinner = document.querySelector(".game-winner")
 
 const totalPlayerPoints = document.querySelector(".player-points")
 const totalComputerPoints = document.querySelector(".computer-points")
@@ -18,11 +19,13 @@ const computerPossibleChoices = [
 function defeat() {
     matchResult.innerHTML = "Defeat"
     computerPoints++
+    return computerPoints
 }
 
 function victory() {
     matchResult.innerHTML = "Victory"
     playerPoints++
+    return playerPoints
 }
 
 function tiedPoint() {
@@ -45,6 +48,7 @@ function rock() {
 
     totalComputerPoints.innerHTML = computerPoints
     totalPlayerPoints.innerHTML = playerPoints
+    verifyWinner()
 }
 
 function scissors() {
@@ -63,6 +67,7 @@ function scissors() {
 
     totalComputerPoints.innerHTML = computerPoints
     totalPlayerPoints.innerHTML = playerPoints
+    verifyWinner()
 }
 
 function paper() {
@@ -81,4 +86,22 @@ function paper() {
 
     totalComputerPoints.innerHTML = computerPoints
     totalPlayerPoints.innerHTML = playerPoints
+    verifyWinner()
+}
+
+function verifyWinner() {
+    if (computerPoints == 10 || playerPoints == 10) {
+        gameWinner.style.display = "block"
+        if (computerPoints == 10) {
+            gameWinner.innerHTML = "Computer Wins"
+            computerPoints = 0
+            playerPoints = 0
+        } else if (playerPoints == 10) {
+            gameWinner.innerHTML == "Player Wins"
+            computerPoints = 0
+            playerPoints = 0
+        }
+    } else {
+        gameWinner.style.display = "none"
+    }
 }

@@ -58,3 +58,10 @@
     font-size: 30px;
     padding: 0 10px;
 }
+
+.game-winner {
+    display: none;
+    color: #05F2DB;
+    padding: 5%;
+    font-size: 30px;
+}
